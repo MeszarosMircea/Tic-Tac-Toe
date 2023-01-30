@@ -1,7 +1,7 @@
 let player = 1, gameEnd = 0, elem = [2], countClicks = 0;
 
 function Game(value) {
-    if(!gameEnd) {
+    if(gameEnd === 0) {
         ++countClicks;
         if(player === 1){
             document.getElementById(value).innerHTML = '👩‍⚖️';
