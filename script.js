@@ -1,4 +1,4 @@
-let player = 1, gameEnd = 0, elem = [2], countClicks = 0;
+let player = 1, gameEnd = 0, elem = [9], countClicks = 0;
 
 function Game(value) {
     if(gameEnd === 0) {
@@ -13,7 +13,7 @@ function Game(value) {
             document.getElementById(value).innerHTML = '👨‍💻';
             document.getElementById(value).onclick = null;
             player = 1;
-            elem[value - 1] = 0; 
+            elem[value - 1] = 2; 
             CheckWinner();
         }
     }
@@ -35,14 +35,14 @@ function CheckWinner() {
             gameEnd = 1;
     }
 
-    if(areEqual(elem[0],elem[1], elem[2], 0) || 
-       areEqual(elem[3],elem[4], elem[5], 0) || 
-       areEqual(elem[6],elem[7], elem[8], 0) ||
-       areEqual(elem[0],elem[3], elem[6], 0) ||
-       areEqual(elem[1],elem[4], elem[7], 0) ||
-       areEqual(elem[2],elem[5], elem[8], 0) ||
-       areEqual(elem[0],elem[4], elem[8], 0) ||
-       areEqual(elem[2],elem[4], elem[6], 0)) { 
+    if(areEqual(elem[0],elem[1], elem[2], 2) || 
+       areEqual(elem[3],elem[4], elem[5], 2) || 
+       areEqual(elem[6],elem[7], elem[8], 2) ||
+       areEqual(elem[0],elem[3], elem[6], 2) ||
+       areEqual(elem[1],elem[4], elem[7], 2) ||
+       areEqual(elem[2],elem[5], elem[8], 2) ||
+       areEqual(elem[0],elem[4], elem[8], 2) ||
+       areEqual(elem[2],elem[4], elem[6], 2)) { 
             document.getElementById("top").innerHTML = "👨‍💻 Wins!";
             document.getElementById("top").style.color = "black";
             document.getElementById("topbutton").innerHTML = "RestartGame";
