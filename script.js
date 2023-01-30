@@ -51,7 +51,7 @@ function CheckWinner() {
     }
 
     if(countClicks === 9 && gameEnd === 0) {
-        document.getElementById("top").innerHTML = "Draw!";
+        document.getElementById("top").innerHTML = "Tie Game!";
         document.getElementById("top").style.color = "black";
         document.getElementById("topbutton").innerHTML = "RestartGame";
         document.getElementById("topbutton").setAttribute('onclick','RestartGame()');
