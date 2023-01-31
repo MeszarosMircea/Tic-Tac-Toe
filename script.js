@@ -1,4 +1,4 @@
-let player = 1, gameEnd = 0, elem = [9], countClicks = 0;
+let player = 1, gameEnd = 0, elem = [0], countClicks = 0;
 
 function Game(value) {
     if(gameEnd === 0) {
@@ -28,10 +28,10 @@ function CheckWinner() {
         areEqual(elem[2],elem[5], elem[8], 1) ||
         areEqual(elem[0],elem[4], elem[8], 1) ||
         areEqual(elem[2],elem[4], elem[6], 1)) { 
-            document.getElementById("top").innerHTML = "👩‍⚖️ Wins!";
-            document.getElementById("top").style.color = "black";
-            document.getElementById("topbutton").innerHTML = "RestartGame";
-            document.getElementById("topbutton").setAttribute('onclick','RestartGame()');
+            document.getElementById("bottom").innerHTML = "👩‍⚖️ Wins!";
+            document.getElementById("bottom").style.color = "black";
+            document.getElementById("bottombutton").innerHTML = "RestartGame";
+            document.getElementById("bottombutton").setAttribute('onclick','RestartGame()');
             gameEnd = 1;
     }
 
@@ -43,18 +43,18 @@ function CheckWinner() {
        areEqual(elem[2],elem[5], elem[8], 2) ||
        areEqual(elem[0],elem[4], elem[8], 2) ||
        areEqual(elem[2],elem[4], elem[6], 2)) { 
-            document.getElementById("top").innerHTML = "👨‍💻 Wins!";
-            document.getElementById("top").style.color = "black";
-            document.getElementById("topbutton").innerHTML = "RestartGame";
-            document.getElementById("topbutton").setAttribute('onclick','RestartGame()');
+            document.getElementById("bottom").innerHTML = "👨‍💻 Wins!";
+            document.getElementById("bottom").style.color = "black";
+            document.getElementById("bottombutton").innerHTML = "RestartGame";
+            document.getElementById("bottombutton").setAttribute('onclick','RestartGame()');
             gameEnd = 1;
     }
 
     if(countClicks === 9 && gameEnd === 0) {
-        document.getElementById("top").innerHTML = "Tie Game!";
-        document.getElementById("top").style.color = "black";
-        document.getElementById("topbutton").innerHTML = "RestartGame";
-        document.getElementById("topbutton").setAttribute('onclick','RestartGame()');
+        document.getElementById("bottom").innerHTML = "Tie Game!";
+        document.getElementById("bottom").style.color = "black";
+        document.getElementById("bottombutton").innerHTML = "RestartGame";
+        document.getElementById("bottombutton").setAttribute('onclick','RestartGame()');
     }
 }
 
