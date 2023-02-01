@@ -8,18 +8,18 @@ function Game(value) {
             document.getElementById(value).onclick = null;
             player = 0;
             elem[value - 1] = 1; 
-            CheckWinner();
+            checkWinner();
         } else {
             document.getElementById(value).innerHTML = '👨‍💻';
             document.getElementById(value).onclick = null;
             player = 1;
             elem[value - 1] = 2; 
-            CheckWinner();
+            checkWinner();
         }
     }
 }
 
-function CheckWinner() {
+function checkWinner() {
     if( areEqual(elem[0],elem[1], elem[2], 1) || 
         areEqual(elem[3],elem[4], elem[5], 1) || 
         areEqual(elem[6],elem[7], elem[8], 1) ||
